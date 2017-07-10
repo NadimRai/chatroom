@@ -1,13 +1,5 @@
 <div id="container">
-	<nav>
-		<ul class="pull-left">
-			<li><%= link_to 'Chill Out Room', "#" %></li>
-			<li><%= link_to 'Hang Out Room', "#" %></li>
-		</ul>
-		<ul class="pull-right">
-			<li><%= link_to 'Logout', '#' %></li>
-		</ul>
-	</nav>
+	<%= render 'shared/nav' %>
 	<div id="chat-container">
 		<header>Chill Out Room</header>
 		<div id="chat-box">
