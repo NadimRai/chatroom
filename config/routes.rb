@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   resources :messages, only: [:create]
 
   root to: 'rooms#index'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 end
