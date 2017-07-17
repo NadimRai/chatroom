@@ -13,4 +13,3 @@ App.message = App.cable.subscriptions.create "MessageChannel",
 
   received: (data) ->
     @collection().append(data.message)
-  

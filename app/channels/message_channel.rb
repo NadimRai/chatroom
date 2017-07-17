@@ -1,5 +1,5 @@
 class MessageChannel < ApplicationCable::Channel
- def subscribed
+  def subscribed
     #reject unless approved
   end
 
