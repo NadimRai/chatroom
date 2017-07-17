@@ -1,10 +1,13 @@
 class MessageChannel < ApplicationCable::Channel
-  def subscribed
-    # stream_from "some_channel"
-    
+ def subscribed
+    #reject unless approved
   end
 
-  def unsubscribed
-    # Any cleanup needed when channel is unsubscribed
+  def follow(data)
+    stream_from "room:#{data['room_id'].to_i}:messages"
+  end
+
+  def unfollow
+    stop_all_streams
   end
 end

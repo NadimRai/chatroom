@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
 
 	def destroy 
 		session[:current_user] = nil
-		cookies.signed[:user_id] ||= nil 
+		cookies.signed[:user_id] = nil 
 		redirect_to login_url
 	end
 
